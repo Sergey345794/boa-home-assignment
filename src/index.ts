@@ -10,7 +10,11 @@ dotenv.config();
 
 const backendPort = process.env.BACKEND_PORT as string;
 const envPort = process.env.PORT as string;
-const PORT = parseInt(backendPort || envPort, 10);
+const defaultPort = '5556';
+const PORT = parseInt(defaultPort || backendPort || envPort, 10);
+
+
+
 
 const app = express();
 

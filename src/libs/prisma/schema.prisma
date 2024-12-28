@@ -23,3 +23,15 @@ model session {
 model shopify_sessions_migrations {
   migration_name String @id @db.VarChar(255)
 }
+
+model savedCart {
+  id         Int      @id @default(autoincrement()) 
+  items      String   @db.Text       
+}
+
+model themeSettings {
+  id              Int     @id @default(autoincrement())
+  text            String  @default("Welcome to your saved cart feature!")
+  textColor       String  @default("#333333")
+  backgroundColor String  @default("#f5f5f5")
+}

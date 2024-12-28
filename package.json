@@ -3,18 +3,33 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "license": "BOA Ideas",
+  "type": "module",
   "scripts": {
     "shopify": "shopify",
     "dev": "shopify app dev",
     "deploy": "shopify app deploy",
-    "create": "shopify app config link"
+    "create": "shopify app config link",
+    "prisma": "prisma"
   },
   "dependencies": {
-    "@shopify/app": "^3.58.2",
+    "@prisma/client": "^6.1.0",
+    "@shopify/app": "^3.49.7",
     "@shopify/cli": "^3.70.0",
     "@shopify/ui-extensions": "2024.10.1",
     "@shopify/ui-extensions-react": "2024.10.1",
+    "@types/express": "^5.0.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
     "react": "^18.3.1"
+  },
+  "prisma": {
+    "schema": "src/libs/prisma/schema.prisma",
+    "seed": "node --experimental-specifier-resolution=node --loader ts-node/esm src/libs/prisma/seed.ts"
+  },
+  "devDependencies": {
+    "prisma": "^6.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
   },
   "author": "BOA Ideas",
   "overrides": {

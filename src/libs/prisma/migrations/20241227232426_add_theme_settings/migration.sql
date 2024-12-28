@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE `savedCart` ADD COLUMN `backgroundColor` VARCHAR(191) NOT NULL DEFAULT '#f5f5f5',
+    ADD COLUMN `textColor` VARCHAR(191) NOT NULL DEFAULT '#333333';
